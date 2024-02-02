@@ -1,0 +1,10 @@
+@import '../../../../variable';
+
+.layout-nav {
+    border-bottom: 1px solid $color-grey;
+}
+
+.layout-footer {
+    display: flex;
+    justify-content: flex-end;
+}

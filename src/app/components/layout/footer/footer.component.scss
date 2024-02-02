@@ -1,0 +1,19 @@
+@import '../../../../variable';
+
+footer {
+    margin: 0px 24px;
+    ul {
+        display: flex;
+        gap: 16px;
+
+        li{
+            p {
+                font-size: 14px;
+                color: $color-grey-1;
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}

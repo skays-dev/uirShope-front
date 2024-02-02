@@ -1,27 +1,26 @@
-<div class="navbar">
-    <p-menubar [model]="items">
-        <ng-template pTemplate="start">
-            <a routerLink="/">
-                <img src="./assets/images/logo.png" height="120" class="mr-2" />
-            </a>
-        </ng-template>
-        <ng-template pTemplate="end">
-            <div class="flex-items">
-                <span class="p-input-icon-right">
-                    <input type="text" pInputText placeholder="Search a Product" class="input-search" />
-                    <i class="pi pi-search"></i>
-                </span>
-                <div class="panier">
-                    <p-badge value="4" severity="danger"></p-badge>
-                    <span>Panier</span>
-                </div>
-                <div class="pi pi-align-justify button-hovet-it" (click)="display = true"></div>
+<p-menubar [model]="items">
+    <ng-template pTemplate="start">
+        <a routerLink="/">
+            <img src="./assets/images/logo.png" height="120" class="mr-2" />
+        </a>
+    </ng-template>
+    <ng-template pTemplate="end">
+        <div class="flex-items">
+            <span class="p-input-icon-right">
+                <input type="text" pInputText placeholder="Search a Product" class="input-search" />
+                <i class="pi pi-search"></i>
+            </span>
+            <div class="panier">
+                <p-badge value="4" severity="danger"></p-badge>
+                <span>Panier</span>
             </div>
+            <div class="pi pi-align-justify button-hovet-it" (click)="display = true"></div>
+        </div>
 
-        </ng-template>
-    </p-menubar>
+    </ng-template>
+</p-menubar>
 
-</div>
+
 
 
 <p-sidebar [(visible)]="display" position="right">
