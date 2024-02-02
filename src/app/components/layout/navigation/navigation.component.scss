@@ -1,0 +1,60 @@
+@import '../../../../variable';
+.navbar{
+    border-bottom: 1px solid $color-grey;
+}
+::ng-deep p-menubar  {
+
+    .p-menubar{
+        background-color: $color-white;
+        margin: 16px 24px;
+        color: $color-dark;
+        border: none;
+        
+    }
+
+    .input-search {
+        border: none;
+        border-bottom: 1px solid $color-grey;
+        border-radius: 0px;
+    }
+
+    .flex-items {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .panier{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .nav-item {
+        div {
+
+            
+            border-radius: 0px;
+            
+            &:hover {
+                border-bottom: 1px solid $color-secondary;
+                background: none;
+            }
+            a {
+                span {
+                    color: $color-dark;
+
+                    &:hover {
+                        color: $color-secondary;
+                    }
+                }
+                
+            }
+        }
+    
+    }
+    
+    .button-hovet-it {
+        cursor: pointer;
+    }
+}
