@@ -1,0 +1,56 @@
+<section class="section">
+    <p-breadcrumb [model]="items" styleClass="custom-breadcrumb"></p-breadcrumb>
+
+    <div class="grid product-detail">
+        <div class="col-12 md:col-6 left-side">
+            <p-galleria [value]="images" [thumbnailsPosition]="'left'" [containerStyle]="{ 'max-width': '640px' }" [numVisible]="5">
+                <ng-template pTemplate="item" let-item>
+                    <div class="main-image">
+                        <img [src]="'http://localhost:4200/' + item" style="width: 100%; min-height: 420px; display: block;" />
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="thumbnail" let-item>
+                    <div class="images grid grid-nogutter justify-content-center">
+                        <img [src]="'http://localhost:4200/' + item"  height="96px"/>
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="col-12 md:col-6 right-side">
+            <div class="start">
+                <h2>UIR pride <span>Manches Courtes</span></h2>
+                <p>Un polo classique d'inspiration sport qui te grade au sec Idea pour hommes et femmes</p>
+                <div class="flex rating">
+                    <p-rating  [readonly]="true" [cancel]="false"></p-rating>
+                    <span>(0 avis)</span>
+                </div>
+            </div>
+            
+            <div class="mid">
+                <div class="price">
+                    <h3>130 DHS</h3>
+                    <h5 class="fake-prices">150 DHS</h5>
+                </div>
+                
+                <div class="stock">
+                    <div class="pi pi-box"></div>
+                    <p>Produit en stock</p>
+                </div>
+            </div>
+
+            <div class="end">
+                <h3>Taille</h3>
+                <div class="tailles">
+                    <button pButton pRipple label="S"></button>
+                    <button pButton pRipple label="M"></button>
+                    <button pButton pRipple label="L"></button>
+                    <button pButton pRipple label="XL"></button>
+                </div>
+                <div class="buy">
+                    <p-dropdown [options]="quantity"></p-dropdown>
+                    <button pButton pRipple label="J'achete"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

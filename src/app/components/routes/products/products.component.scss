@@ -1,0 +1,107 @@
+.fontD {
+  margin: 20px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: 70px;
+    color: rgb(4, 4, 81);
+    margin: 0;
+  }
+
+  h1 {
+    font-family: "Gamja Flower", sans-serif;
+    font-size: 56px;
+    color: yellowgreen;
+    line-height: 25px;
+  }
+
+  p {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: rgb(4, 4, 81);
+    margin: 0;
+    margin-top: 16px;
+    font-weight: 600;
+  }
+
+  .des {
+    background-color: rgb(4, 4, 81);
+    display: inline-block;
+    margin-top: 4px;
+    border-radius: 237px;
+
+    p {
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      color: yellowgreen;
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+    }
+  }
+}
+:host ::ng-deep {
+  .product-item {
+    .product-item-content {
+      border: 1px solid var(--surface-d);
+      border-radius: 3px;
+      margin: 0.3rem;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .product-image {
+      width: 50%;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+  }
+}
+
+.card {
+  .custom-carousel-item {
+    background-color: #f4eded; // Set the grey color as needed
+    border-radius: 50px; // Adjust the radius as needed
+    overflow: hidden;
+    transition: background 0.9s ease;
+
+    &:hover {
+      background: url("../../../../assets/images/togo.jpg") center center/cover
+        no-repeat;
+    }
+  }
+
+  h3,
+  h2,
+  h4,
+  p {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    color: rgb(5, 3, 70);
+    line-height: 25px;
+  }
+
+  p {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: rgb(6, 2, 106);
+    line-height: 25px;
+  }
+
+  .tags-and-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+}
+.product-image {
+  width: 50%; /* Adjust the width as needed */
+  height: auto;
+  border-radius: 45px; /* Optional: Add rounded corners to images */
+}

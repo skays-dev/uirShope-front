@@ -1,0 +1,169 @@
+@import '../../../../variable';
+section {
+    ::ng-deep p-breadcrumb {
+        nav {
+            border: none;
+            border-radius: 0px;
+
+            ol {
+                gap: 24px;
+
+                span {
+                    color: $color-dark;
+
+                    &:hover {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    .product-detail {
+        margin: 1.5rem 0px;
+        .left-side {
+            ::ng-deep p-galleria {
+                .main-image {
+                    background-color: $color-grey;
+                    border-radius: 12px;
+                    margin-left: 16px;
+                }
+
+                .p-galleria-thumbnail-container {
+                    background-color: $color-white;
+                }
+
+                .images {
+                    background-color: $color-grey;
+                    border-radius: 12px;
+                }
+            }
+        }
+
+        .right-side {
+            .start {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                border-bottom: 1px solid $color-grey;
+                
+               h2 {
+                font-size: 3rem;
+                color: $color-primary;
+                font-style: italic;
+                span {
+                    font-weight: 400;
+                    font-style: normal;
+                }
+               }
+
+               p {
+                font-size: 1.4rem;
+                font-weight: 500;
+               }
+
+               .rating {
+                margin-bottom: 16px;
+                gap: 8px;
+                color: $color-grey-1;
+
+                ::ng-deep p-rating {
+                    svg{
+                        color: $color-grey-1;
+                    }
+                }
+               }
+            }
+
+            .mid {
+                display: flex;
+                justify-content: space-between;
+                margin: 16px 0px;
+                
+                
+
+                .price {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    
+                    h3 {
+                        font-size: 3rem;
+                        color: $color-primary;
+                    }
+
+                    h5 {
+                        font-size: 2rem;
+                        color: $color-grey-1;
+                    }
+                }
+
+                .stock {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    
+                    .pi {
+                        font-size: 2rem;
+                        color: $color-primary;
+                    }
+                    p {
+                        font-style: italic;
+                        color: $color-primary;
+                        font-weight: 500;
+                        
+                    }
+                }
+            }
+            
+            .end {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                
+                border-top: 1px solid $color-grey;
+
+                h3{
+                    margin-top: 16px;
+                }
+
+                .tailles {
+                    display: flex;
+                    gap: 16px;
+                    
+
+                    button {
+                        padding: 0.50rem 1.25rem;
+                        color: $color-dark;
+                        background: $color-white;
+                        border: 1px solid $color-grey;
+                        transition: 0.1s all;
+
+                        &:hover {
+                            color: $color-white;
+                            background: $color-primary;
+                        }
+                    }
+                }
+
+                .buy {
+                    display: flex;
+                    gap: 16px;
+                    button {
+                        width: 100%;
+                        color: $color-white;
+                        background: $color-primary;
+                        border: 1px solid $color-primary;
+                        transition: 0.1s all;
+
+                        &:hover {
+                            color: $color-dark;
+                            background: $color-secondary;
+                            border: 1px solid $color-secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

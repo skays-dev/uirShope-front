@@ -1,0 +1,53 @@
+<section class="section">
+    <p-breadcrumb [model]="items" styleClass="custom-breadcrumb"></p-breadcrumb>
+
+    <h2 class="name-category">{{id}}</h2>
+
+    <hr/>
+
+    <div class="all-categories">
+        <ul class="items">
+            <li class="item">
+                <a href="">Tous</a>
+            </li>
+            <li class="item">
+                <a href="">Vetements</a>
+            </li>
+            <li class="item">
+                <a href="">Chaussures</a>
+            </li>
+            <li class="item">
+                <a href="">Accessoires</a>
+            </li>
+        </ul>
+    </div>
+
+    <hr/>
+
+    <p-dataView #dv [value]="products" [paginator]="true" [rows]="9" layout="grid">
+        <ng-template pTemplate="gridItem" let-products>
+            <div class="grid grid-nogutter">
+                <div *ngFor="let product of products" class="col-12 sm:col-6 lg:col-12 xl:col-4 p-2">
+                    <a [routerLink]="'../../product/' + product.idProduct">
+                        <div class=" text-center p-2 card-item">
+                            <div class="img-product my-5 m-2">
+                                <p-carousel [value]="product.imgs" [numVisible]="1" [numScroll]="1" [circular]="false">
+                                    <ng-template let-image pTemplate="item">
+                                            <img [src]="image" class="shadow-4"/>
+                                    </ng-template>
+                                </p-carousel>
+                            </div>
+                            <div class="cart-item-detail m-2">
+                                <div class="title"><h5>{{product.nomProduct}}</h5></div>
+                                <p>{{ truncateText(product.description, 20) }}</p>
+                                <h6 class="price">{{product.prixProduct}} DHS</h6>
+                                <h6 class="fake-price fake-prices">{{product.prixProduct + 100}} DHS</h6>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+        </ng-template>
+    </p-dataView>
+</section>
