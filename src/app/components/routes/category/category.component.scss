@@ -1,0 +1,135 @@
+@import "../../../../variable";
+
+.section {
+  ::ng-deep p-breadcrumb {
+    nav {
+      border: none;
+      border-radius: 0px;
+
+      ol {
+        gap: 24px;
+
+        span {
+          color: $color-dark;
+
+          &:hover {
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+
+  .name-category {
+    font-style: italic;
+    font-size: 3rem;
+    color: $color-primary;
+    margin: 16px;
+  }
+
+  .all-categories {
+    margin: 16px;
+
+    .items {
+      display: flex;
+      gap: 24px;
+      .item {
+        a {
+          color: $color-grey-1;
+          font-size: 1.5rem;
+          font-style: italic;
+          font-weight: 500;
+
+          &:hover {
+            border-bottom: 1px solid $color-primary;
+            color: $color-primary;
+          }
+        }
+      }
+    }
+  }
+
+  ::ng-deep p-dataView {
+    ::ng-deep p-carousel {
+      img {
+        width: 100%;
+      }
+      .p-carousel-container {
+        button {
+          color: $color-dark;
+        }
+      }
+      .p-carousel-dot-icon {
+        width: 24px;
+      }
+      .p-icon{
+        height: 2rem;
+        width: 2rem;
+      }
+      button {
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+
+    ul {
+      display: none;
+    }
+    .card-item {
+      transition: 0.2s all;
+      cursor: pointer;
+
+      &:hover {
+        .img-product {
+          background-color: $color-primary;
+        }
+      }
+
+      .img-product {
+        padding: 48px 0px;
+        border-radius: 40px;
+        background-color: $color-grey;
+        transition: 0.2s all;
+      }
+
+      .cart-item-detail {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .title {
+          background-color: $color-primary;
+          border-radius: 25px;
+          padding: 0px 8px;
+          h5 {
+            font-size: 24px;
+            font-weight: 600;
+            color: $color-white;
+          }
+        }
+
+        p {
+          margin-top: 4px;
+          color: $color-primary;
+
+          span {
+            font-weight: 800;
+            font-style: italic;
+          }
+        }
+
+        .price {
+          font-size: 24px;
+          color: $color-primary;
+          font-weight: 800;
+          margin-top: 8px;
+        }
+
+        .fake-price {
+          font-weight: 500;
+          color: $color-grey-1;
+        }
+      }
+    }
+  }
+}
