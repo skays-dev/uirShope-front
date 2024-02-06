@@ -5,6 +5,9 @@ import { RatingModule } from 'primeng/rating';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from "primeng/dropdown";
 import { GalleriaModule } from 'primeng/galleria';
+import { Product } from '../../../service/products/product.interface';
+import { ProductService } from '../../../service/products/product.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-details',
@@ -23,46 +26,22 @@ export class ProductDetailsComponent implements OnInit {
 
   images: any = ["assets/images/product.png", "assets/images/product1.png"];
 
-  products = [
-		{
-			id: "1000",
-			name: "T-shirt Polo",
-			image: ["bamboo-watch.jpg", "bamboo-watch.jpg"],
-		},
-		{
-			id: "1000",
-			name: "T-shirt Polo",
-			image: ["bamboo-watch.jpg", "bamboo-watch.jpg"],
-		},
-		{
-			id: "1000",
-			name: "T-shirt Polo",
-			image: ["bamboo-watch.jpg", "bamboo-watch.jpg"],
-		},
-		{
-			id: "1000",
-			name: "T-shirt Polo",
-			image: ["bamboo-watch.jpg", "bamboo-watch.jpg"],
-		},
-		{
-			id: "1000",
-			name: "T-shirt Polo",
-			image: ["bamboo-watch.jpg", "bamboo-watch.jpg"],
-		},
-		{
-			id: "1000",
-			name: "T-shirt Polo",
-			image: ["bamboo-watch.jpg", "bamboo-watch.jpg"],
-		},
-		{
-			id: "1000",
-			name: "T-shirt Polo",
-			image: ["bamboo-watch.jpg", "bamboo-watch.jpg"],
-		},
-	]
+  product!: any;
 
+  id!: number;
+  constructor(
+    private productService : ProductService,
+    route: ActivatedRoute
+  ){
+    const idParams = route.snapshot.params['id']
+    this.id = idParams
+  }
+  
   ngOnInit(): void {
-    this.items = [{ label: 'UIR Shope', routerLink: '/' }, { label: 'textille', routerLink: '/product-details' }, { label: 'Name Product', routerLink: '/product-details' }];
+    this.productService.getSingleProduct(this.id).subscribe(Product => {
+		this.product = Product;
+    console.log(this.product)
+	  });
 
   }
 }

@@ -1,3 +1,5 @@
+@import '../../../../variable';
+
 .fontD {
   margin: 20px;
   display: flex;
@@ -46,33 +48,210 @@
     }
   }
 }
-:host ::ng-deep {
-  .product-item {
-    .product-item-content {
-      border: 1px solid var(--surface-d);
-      border-radius: 3px;
-      margin: 0.3rem;
-      text-align: center;
-      padding: 2rem 0;
-    }
 
-    .product-image {
-      width: 50%;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    }
-  }
-}
+// :host ::ng-deep {
+//   .product-item {
+//     .product-item-content {
+//       border: 1px solid var(--surface-d);
+//       border-radius: 3px;
+//       margin: 0.3rem;
+//       text-align: center;
+//       padding: 2rem 0;
+//     }
+
+//     .product-image {
+//       width: 50%;
+//       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+//     }
+//   }
+// }
 
 .card {
+  border: none;
+  ::ng-deep p-carousel {
+    .p-carousel {
+      margin-bottom: 2rem;
+
+      img {
+        width: 100%;
+        height: 15rem;
+      }
+
+      ul {
+        display: none;
+      }
+
+      .p-carousel-container {
+        button {
+          color: $color-dark;
+        }
+      }
+
+      .p-carousel-dot-icon {
+        width: 24px;
+      }
+
+      .p-icon {
+        height: 2rem;
+        width: 2rem;
+      }
+
+      .card-body {
+        title {
+          color: $color-primary;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
   .custom-carousel-item {
-    background-color: #f4eded; // Set the grey color as needed
-    border-radius: 50px; // Adjust the radius as needed
+    background-color: #f4eded;
+    border-radius: 50px;
     overflow: hidden;
-    transition: background 0.9s ease;
+    transition: all 0.9s;
 
     &:hover {
-      background: url("../../../../assets/images/togo.jpg") center center/cover
-        no-repeat;
+      background: url("../../../../assets/images/togo.jpg") center center/cover no-repeat;
+
+      .card-body {
+        .card-body-up {
+          .title {
+            color: $color-white;
+          }
+
+          .description {
+            color: $color-white;
+          }
+
+          .variety-wrapper {
+            background-color: $color-white;
+            .variety {
+              color: $color-primary;
+            }
+          }
+        }
+
+        .card-body-down {
+          p{
+            color: $color-white;
+          }
+
+        }
+
+        ::ng-deep p-button {
+          .p-button {
+            border: 1px solid $color-white;
+            background-color: $color-white;
+            color: $color-primary;
+          }
+        }
+
+
+        .stock {
+          .pi {
+            color: $color-white;
+          }
+
+          p {
+            color: $color-white;
+          }
+        }
+      }
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      margin: 0px 1rem 1rem 1rem;
+      transition: all 0.9s;
+
+      .card-body-up {
+        transition: all 0.9s;
+        .title {
+          font-size: 2rem;
+          margin: 0;
+          transition: all 0.9s;
+        }
+
+        .description {
+          font-size: 1.3rem;
+          color: $color-primary;
+          font-style: normal;
+          font-weight: 400 !important;
+          margin: 0;
+          transition: all 0.9s;
+
+          span {
+            font-style: italic;
+            font-weight: 700;
+          
+          }
+        }
+
+        .variety-wrapper {
+          background-color: $color-primary;
+          display: inline-block;
+          border-radius: 30px;
+          margin-top: 0.8rem;
+          transition: all 0.9s;
+
+
+          .variety {
+            margin-left: 0.2rem;
+            margin-right: 0.2rem;
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: $color-white;
+            transition: all 0.9s;
+          }
+        }
+      }
+
+      .card-body-down {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0.5rem;
+        transition: all 0.9s;
+
+      }
+
+      ::ng-deep p-button {
+        .p-button {
+          margin-top: 1rem;
+          background-color: $color-primary;
+          color: $color-white;
+          border: $color-primary 1px solid;
+          padding: 2px;
+          border-radius: 30px;
+          transition: all 0.9s;
+        }
+      }
+
+
+      .stock {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+        margin-top: 1rem;
+        transition: all 0.9s;
+
+        .pi {
+          font-size: 1.5rem;
+          color: $color-primary;
+          transition: all 0.9s;
+        }
+
+        p {
+          font-style: italic;
+          color: $color-primary;
+          font-size: 1rem;
+          font-weight: 500;
+          transition: all 0.9s;
+        }
+      }
     }
   }
 
@@ -100,8 +279,11 @@
     margin-top: 0.5rem;
   }
 }
+
 .product-image {
-  width: 50%; /* Adjust the width as needed */
+  width: 50%;
+  /* Adjust the width as needed */
   height: auto;
-  border-radius: 45px; /* Optional: Add rounded corners to images */
+  border-radius: 45px;
+  /* Optional: Add rounded corners to images */
 }

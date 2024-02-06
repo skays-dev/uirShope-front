@@ -1,25 +1,26 @@
 <section class="section">
-    <p-breadcrumb [model]="items" styleClass="custom-breadcrumb"></p-breadcrumb>
+    <p-breadcrumb  [model]="items" styleClass="custom-breadcrumb"></p-breadcrumb>
 
-    <div class="grid product-detail">
+    <div class="grid product-detail" >
         <div class="col-12 md:col-6 left-side">
-            <p-galleria [value]="images" [thumbnailsPosition]="'left'" [containerStyle]="{ 'max-width': '640px' }" [numVisible]="5">
+            <p-galleria [value]="product.imgs" [thumbnailsPosition]="'left'" [containerStyle]="{ 'max-width': '640px' }" [numVisible]="5">
                 <ng-template pTemplate="item" let-item>
                     <div class="main-image">
-                        <img [src]="'http://localhost:4200/' + item" style="width: 100%; min-height: 420px; display: block;" />
+                        <img [src]=" item" style="width: 100%; min-height: 420px; display: block;" />
                     </div>
                 </ng-template>
                 <ng-template pTemplate="thumbnail" let-item>
                     <div class="images grid grid-nogutter justify-content-center">
-                        <img [src]="'http://localhost:4200/' + item"  height="96px"/>
+                        <img [src]="item"  height="96px"/>
                     </div>
                 </ng-template>
             </p-galleria>
         </div>
         <div class="col-12 md:col-6 right-side">
-            <div class="start">
-                <h2>UIR pride <span>Manches Courtes</span></h2>
-                <p>Un polo classique d'inspiration sport qui te grade au sec Idea pour hommes et femmes</p>
+            <div class="start"  >
+                
+                <h2>{{product.name}}</h2>
+                <p>{{ product.description }}</p>
                 <div class="flex rating">
                     <p-rating  [readonly]="true" [cancel]="false"></p-rating>
                     <span>(0 avis)</span>
@@ -28,8 +29,8 @@
             
             <div class="mid">
                 <div class="price">
-                    <h3>130 DHS</h3>
-                    <h5 class="fake-prices">150 DHS</h5>
+                    <h3>{{product.prixProduct}} DHS</h3>
+                    <h5 class="fake-prices">{{product.prixProduct + 100}} DHS</h5>
                 </div>
                 
                 <div class="stock">

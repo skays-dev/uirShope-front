@@ -1,14 +1,14 @@
 @import '../../../../variable';
 
-::ng-deep p-menubar  {
+::ng-deep p-menubar {
 
-    .p-menubar{
+    .p-menubar {
         background-color: $color-white;
         margin: 16px 24px;
         color: $color-dark;
         border: none;
         padding: 0;
-        
+
     }
 
     .input-search {
@@ -23,18 +23,43 @@
         gap: 24px;
     }
 
-    .panier{
+    .panier {
         display: flex;
         align-items: center;
         gap: 8px;
     }
 
+    .paniers {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        li {
+            div {
+                a {
+                    color: $color-dark;
+
+                    &:hover {
+                        border-bottom: 1px solid $color-secondary;
+                        background: none;
+
+
+                        color: $color-secondary;
+
+                    }
+                }
+            }
+        }
+
+
+    }
+
     .nav-item {
         div {
 
-            
+
             border-radius: 0px;
-            
+
             &:hover {
                 border-bottom: 1px solid $color-secondary;
                 background: none;
@@ -43,16 +68,17 @@
                     color: $color-secondary;
                 }
             }
+
             a {
                 span {
                     color: $color-dark;
                 }
-                
+
             }
         }
-    
+
     }
-    
+
     .button-hovet-it {
         cursor: pointer;
     }

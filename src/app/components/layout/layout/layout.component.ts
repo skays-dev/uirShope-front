@@ -11,7 +11,5 @@ import { CategoryService } from '../../../service/categories/category.service';
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
 })
-export class LayoutComponent {
-        
-        
+export class LayoutComponent {        
 }

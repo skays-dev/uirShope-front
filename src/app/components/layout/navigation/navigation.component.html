@@ -10,10 +10,26 @@
                 <input type="text" pInputText placeholder="Search a Product" class="input-search" />
                 <i class="pi pi-search"></i>
             </span>
-            <div class="panier">
-                <p-badge value="4" severity="danger"></p-badge>
-                <span>Panier</span>
-            </div>
+            @if (isAuth) {
+                <div class="panier">
+                    <p-badge value="4" severity="danger"></p-badge>
+                    <span>Panier</span>
+                </div>
+            } @else {
+                <ul class="paniers">
+                    <li>
+                        <div>
+                            <a routerLink="auth/login">Login</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a routerLink="auth/register">Register</a>
+                        </div>
+                    </li>
+                </ul>
+            }
+            
             <div class="pi pi-align-justify button-hovet-it" (click)="display = true"></div>
         </div>
 

@@ -15,6 +15,8 @@ import { CategoryService } from '../../../service/categories/category.service';
     styleUrl: './navigation.component.scss'
 })
 export class NavigationComponent implements OnInit {
+    isAuth:boolean = false;
+
     display!: boolean;
 
     itemsFormat: MenuItem[] = [
